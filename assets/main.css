@@ -349,7 +349,7 @@ td.sponsor img{
 }
 .masthead-title .title1{ color:#6C3A3E; }
 .masthead-title .title2{ color:#8FA05E; }
-.masthead-title .year{ font-size:1em; color:#2A2A2A; }
+.masthead-title .year{ font-size:0.9em; color:#2A2A2A; }
 /* === Fixes & final overrides === */
 
 /* Single source of truth for content width */
