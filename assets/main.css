@@ -312,12 +312,12 @@ td.sponsor img{
 /* Size the logo within the chip */
 .logo-in-chip{
   display: none;
-  height: clamp(44px, 8vw, 90px);      /* adjust to taste */
+  height: 110px; width: auto;      /* adjust to taste */
   width: auto;                         /* keep aspect ratio */
   filter: drop-shadow(0 1px 3px rgba(0,0,0,.25));
   pointer-events: none;                /* avoid blocking clicks */
 }
-* Make the title ABOVE the banner bigger (if you're using it) */
+/* Make the title ABOVE the banner bigger (if you're using it) */
 .masthead-title{
   max-width: 1000px;
   margin: 8px auto 10px;
