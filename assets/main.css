@@ -215,9 +215,12 @@ td.title-special{ color:#8FA05E; }
   margin: 12px auto 24px auto;
   text-align: center;
 }
+/* Center the image and make it ~half size */
 .site-logo img{
-  height: 120px;              /* uniform size */
-  width: auto;                /* keep aspect ratio */
+  display: block;
+  margin: 0 auto;
+  height: 240px;           /* adjust: ~half of what you had */
+  width: auto;             /* keep aspect ratio */
   max-width: 90%;
 }
 
