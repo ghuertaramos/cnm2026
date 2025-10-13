@@ -219,7 +219,7 @@ td.title-special{ color:#8FA05E; }
 .site-logo img{
   display: block;
   margin: 0 auto;
-  height: 480px;           /* adjust: ~half of what you had */
+  height: 360px;           /* adjust: ~half of what you had */
   width: auto;             /* keep aspect ratio */
   max-width: 90%;
 }
