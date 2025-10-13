@@ -170,3 +170,34 @@ footer{font-size:0.875em; margin-top:12em; text-align:center;}
     table.footer{font-size:0.33em;}
 }
 
+/* === CNM 2026 Ipomoea palette overrides === */
+body{ background-color:#F7F6F2; color:#2A2A2A; }
+
+/* Links */
+a{ color:#8FA05E; }
+a:hover{ color:#6C3A3E; }
+a:active{ color:#6C3A3E; }
+a.current{ color:#8FA05E; }
+li a, p a { text-decoration-color:#CBB383; }
+
+/* Headings / titles */
+h1,h2,h3,h4{ color:#6C3A3E; text-shadow:1px 1px 2px #CBB383; }
+/* “Conference / Template” logo colors */
+.title1{ color:#6C3A3E; }       /* was red */
+.title2{ color:#8FA05E; }       /* was navy */
+.year{ color:#2A2A2A; }
+
+/* Banner chip + date/venue */
+.top-left{
+  color:#2A2A2A;
+  background: rgba(240,228,198,.92);  /* cream */
+}
+.bottom-right{ color:#F7F6F2; }       /* keep readable over photo */
+
+/* Program table colors */
+td.room{ color:#8FA05E; }
+td.title{ color:#6C3A3E; }
+td.title-special{ color:#8FA05E; }
+
+/* Optional: card-like sections (if you use them) */
+/* table.plenary{ background:#F0E4C6; }  */
