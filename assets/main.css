@@ -237,7 +237,7 @@ td.title-special{ color:#8FA05E; }
   justify-content: center;    /* centers the image inside */
 }
 .masthead-logo img{
-  height: 480px;              /* adjust size here */
+  height: 360px;              /* adjust size here */
   width: auto;
   max-width: 100%;
 }
