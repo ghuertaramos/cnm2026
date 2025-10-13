@@ -349,7 +349,7 @@ td.sponsor img{
 }
 .masthead-title .title1{ color:#6C3A3E; }
 .masthead-title .title2{ color:#8FA05E; }
-.masthead-title .year{ font-size:.7em; color:#2A2A2A; }
+.masthead-title .year{ font-size:1em; color:#2A2A2A; }
 /* === Fixes & final overrides === */
 
 /* Single source of truth for content width */
@@ -365,7 +365,7 @@ td.sponsor img{
   background: rgba(240,228,198,.92);
   border-radius: 0;
   font-family: 'Roboto Slab', serif;
-  font-size: clamp(18px, 3.6vw, 48px);   /* ↓ shrinks more on narrow screens */
+  font-size: clamp(20px, 4.2vw, 56px);   /* ↓ shrinks more on narrow screens */
   line-height: 1.05;
 }
 .masthead-title .chip{
@@ -408,3 +408,13 @@ table.sponsors td.sponsor img{
   max-width: 100%;
   object-fit: contain;
 }
+/* 2px white outline around transparent PNG + soft shadow */
+.top-left--logo .logo-in-chip{
+  filter:
+    drop-shadow( 1px  0   0 #fff)
+    drop-shadow(-1px  0   0 #fff)
+    drop-shadow( 0    1px 0 #fff)
+    drop-shadow( 0   -1px 0 #fff)
+    drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+
