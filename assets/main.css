@@ -311,10 +311,21 @@ td.sponsor img{
 
 /* Size the logo within the chip */
 .logo-in-chip{
-  display: block;
+  display: none;
   height: clamp(44px, 8vw, 90px);      /* adjust to taste */
   width: auto;                         /* keep aspect ratio */
   filter: drop-shadow(0 1px 3px rgba(0,0,0,.25));
   pointer-events: none;                /* avoid blocking clicks */
 }
-
+* Make the title ABOVE the banner bigger (if you're using it) */
+.masthead-title{
+  max-width: 1000px;
+  margin: 8px auto 10px;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-size: clamp(32px, 5.8vw, 64px);   /* bigger */
+  line-height: 1.1;
+}
+.masthead-title .title1{ color:#6C3A3E; }
+.masthead-title .title2{ color:#8FA05E; }
+.masthead-title .year{ font-size:.7em; color:#2A2A2A; }
