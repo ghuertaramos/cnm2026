@@ -229,3 +229,19 @@ td.title-special{ color:#8FA05E; }
   .site-logo{ width: 100%; }
   .site-logo img{ height: 90px; }
 }
+/* Top masthead logo */
+.masthead-logo{
+  width: 1000px;              /* same as your page width */
+  margin: 8px auto 12px;      /* centers the block */
+  display: flex;
+  justify-content: center;    /* centers the image inside */
+}
+.masthead-logo img{
+  height: 120px;              /* adjust size here */
+  width: auto;
+  max-width: 100%;
+}
+@media (max-width:1100px){
+  .masthead-logo{ width:100%; }
+  .masthead-logo img{ height:90px; }
+}
