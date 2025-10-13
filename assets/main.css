@@ -209,3 +209,20 @@ td.title-special{ color:#8FA05E; }
 
 /* Optional: card-like sections (if you use them) */
 /* table.plenary{ background:#F0E4C6; }  */
+/* Event logo between nav and About */
+.site-logo{
+  width: 1000px;              /* matches your page width */
+  margin: 12px auto 24px auto;
+  text-align: center;
+}
+.site-logo img{
+  height: 120px;              /* uniform size */
+  width: auto;                /* keep aspect ratio */
+  max-width: 90%;
+}
+
+/* smaller on phones */
+@media (max-width: 1100px){
+  .site-logo{ width: 100%; }
+  .site-logo img{ height: 90px; }
+}
