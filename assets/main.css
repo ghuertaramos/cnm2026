@@ -164,7 +164,6 @@ img.center{display:block; width:67%; margin:1em auto 2em auto;}
 /* Flyer Images */
 table.flyers{width:800px;}
 td.flyer{white-space:nowrap; width:50%; text-align:center; vertical-align:middle; padding:0px 0px 0px 0px;}
-td.sponsor img{width: 100%}
 
 footer{font-size:0.875em; margin-top:12em; text-align:center;}
 
@@ -351,3 +350,61 @@ td.sponsor img{
 .masthead-title .title1{ color:#6C3A3E; }
 .masthead-title .title2{ color:#8FA05E; }
 .masthead-title .year{ font-size:.7em; color:#2A2A2A; }
+/* === Fixes & final overrides === */
+
+/* Single source of truth for content width */
+:root { --content-width: 1000px; }
+
+/* Keep title bar and banner aligned */
+.masthead-title,
+.banner { max-width: var(--content-width); margin-left:auto; margin-right:auto; }
+
+/* Title bar: allow smaller size on phones so it never overflows */
+.masthead-title{
+  padding: 10px 16px;
+  background: rgba(240,228,198,.92);
+  border-radius: 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: clamp(18px, 3.6vw, 48px);   /* ↓ shrinks more on narrow screens */
+  line-height: 1.05;
+}
+.masthead-title .chip{
+  display: inline;
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  white-space: nowrap;
+}
+/* On very small phones, allow wrapping instead of clipping */
+@media (max-width: 380px){
+  .masthead-title .chip{ white-space: normal; }
+}
+
+/* Banner logo: bigger on desktop, sane on mobile */
+.top-left--logo{
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  top: 16px; left: 16px;         /* move as you like */
+}
+.top-left--logo .logo-in-chip{
+  display: block !important;
+  height: clamp(72px, 14vw, 240px) !important;  /* ↑ bigger on desktop */
+  width: auto;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,.25));
+  pointer-events: none;
+}
+@media (min-width: 1600px){
+  .top-left--logo .logo-in-chip{ height: 260px !important; }
+}
+@media (max-width: 480px){
+  .top-left--logo .logo-in-chip{ height: 64px !important; }
+}
+
+/* Sponsors: force height-based sizing, prevent width:100% from elsewhere */
+table.sponsors td.sponsor img{
+  height: clamp(90px, 13vw, 220px) !important;
+  width: auto !important;
+  max-width: 100%;
+  object-fit: contain;
+}
