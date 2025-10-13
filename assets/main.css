@@ -311,27 +311,36 @@ td.sponsor img{
 /* Show and size the logo */
 .top-left--logo .logo-in-chip{
   display: block !important;           /* was none */
-  height: 80px;                        /* smaller so it doesn’t clip */
+  height: clamp(64px, 9vw, 150px) !important;  /* bigger on wide screens, modest on phones */                       /* smaller so it doesn’t clip */
   width: auto;                         /* keep aspect ratio */
   filter: drop-shadow(0 1px 3px rgba(0,0,0,.25));
   pointer-events: none;
 }
+/* Give it an extra bump on very large desktops */
+@media (min-width: 1600px){
+  .top-left--logo .logo-in-chip{ height: 170px !important; }
+}
+
+/* Keep it a bit smaller on very small phones */
+@media (max-width: 480px){
+  .top-left--logo .logo-in-chip{ height: 60px !important; }
+}
 /* Make the title ABOVE the banner bigger (if you're using it) */
 /* Title above the banner — single line */
 .masthead-title{
-  max-width: 1000px;           /* match your page width */
+  max-width: 1000px;
   margin: 6px auto 10px;
   text-align: center;
   font-family: 'Roboto Slab', serif;
-  font-size: clamp(28px, 5vw, 64px);   /* scales with screen */
+  font-size: clamp(24px, 4.3vw, 52px);  /* ↓ smaller across sizes */
   line-height: 1.05;
 }
 
 .masthead-title .chip{
   display: inline-block;
-  white-space: nowrap;          /* <-- forces single line */
-  background: rgba(240,228,198,.92); /* cream chip (optional) */
-  padding: 8px 16px;
+  white-space: nowrap;                  /* keep single line */
+  background: rgba(240,228,198,.92);
+  padding: 6px 14px;                    /* a bit tighter */
   border-radius: 12px;
 }
 .masthead-title .title1{ color:#6C3A3E; }
