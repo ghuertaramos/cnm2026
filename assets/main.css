@@ -327,21 +327,26 @@ td.sponsor img{
 }
 /* Make the title ABOVE the banner bigger (if you're using it) */
 /* Title above the banner — single line */
+/* Make the title bar a full-width rectangle */
 .masthead-title{
-  max-width: 1000px;
+  max-width: var(--content-width);
   margin: 6px auto 10px;
+  padding: 10px 16px;                 /* bar padding */
+  background: rgba(240,228,198,.92);  /* cream bar */
+  border-radius: 0 !important;        /* no rounded corners */
   text-align: center;
   font-family: 'Roboto Slab', serif;
-  font-size: clamp(24px, 4.3vw, 52px);  /* ↓ smaller across sizes */
+  font-size: clamp(24px, 4.3vw, 52px);
   line-height: 1.05;
 }
 
+/* The inner chip should not draw its own box */
 .masthead-title .chip{
-  display: inline-block;
-  white-space: nowrap;                  /* keep single line */
-  background: rgba(240,228,198,.92);
-  padding: 6px 14px;                    /* a bit tighter */
-  border-radius: 12px;
+  display: inline;                    /* let the bar be the parent */
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  white-space: nowrap;                /* keep single line */
 }
 .masthead-title .title1{ color:#6C3A3E; }
 .masthead-title .title2{ color:#8FA05E; }
