@@ -293,4 +293,28 @@ td.sponsor img{
   th, td, tr{ font-size: inherit; line-height: 1.4; }
   td.navigation{ padding: 0 10px; }
 }
+/* Ensure banner layers are ordered correctly */
+.banner{ position: relative; }
+.banner::after{ z-index: 1; }          /* your dark overlay */
+.top-left, .bottom-right{ z-index: 2; }
+
+/* Re-purpose top-left as a logo chip */
+.top-left--logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;             /* centers the logo inside */
+  padding: 8px 12px;                   /* chip padding */
+  background: transparent;   /* cream chip; set to transparent if undesired */
+  border-radius: 12px;
+  /* position stays top-left from your existing .top-left rule */
+}
+
+/* Size the logo within the chip */
+.logo-in-chip{
+  display: block;
+  height: clamp(44px, 8vw, 90px);      /* adjust to taste */
+  width: auto;                         /* keep aspect ratio */
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,.25));
+  pointer-events: none;                /* avoid blocking clicks */
+}
 
