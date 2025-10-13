@@ -245,3 +245,52 @@ td.title-special{ color:#8FA05E; }
   .masthead-logo{ width:100%; }
   .masthead-logo img{ height:90px; }
 }
+/* === Mobile-friendly overrides for CNM 2026 === */
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* Make the main column fluid, capped at 1000px on large screens */
+body{
+  width: auto;
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* Stop hard widths on content blocks */
+p, ul, table { width: 100% !important; max-width: 100%; }
+
+/* Banner scales by viewport */
+.banner img{ height: clamp(180px, 32vw, 340px); }
+
+/* Navigation: fluid width + responsive size */
+table.navigation{ width: 100%; }
+td.navigation{ font-size: clamp(18px, 3.6vw, 24px); }
+
+/* Top logo block */
+.masthead-logo, .site-logo{ width: 100%; margin: 12px auto; text-align: center; }
+.masthead-logo img, .site-logo img{
+  height: clamp(80px, 12vw, 120px);
+  width: auto;
+}
+
+/* Headings and body text scale sanely */
+h1{ font-size: clamp(28px, 5.2vw, 42px); }
+h2{ font-size: clamp(24px, 4.6vw, 36px); }
+h3{ font-size: clamp(20px, 3.8vw, 28px); }
+p  { font-size: clamp(16px, 2.6vw, 18px); line-height: 1.6; }
+
+/* Sponsors row responsive */
+table.sponsors{ width: 100%; }
+td.sponsor img{
+  height: clamp(70px, 13vw, 150px);
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Neutralize the old mobile hack that enlarged everything */
+@media only screen and (max-width: 1100px){
+  th, td, tr{ font-size: inherit; line-height: 1.4; }
+  td.navigation{ padding: 0 10px; }
+}
+
